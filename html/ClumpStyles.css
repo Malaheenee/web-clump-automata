@@ -1,0 +1,39 @@
+label {
+  font-family: sans-serif;
+  font-size: medium;
+  font-weight: bold;
+}
+
+textarea {
+  font-family: Courier, monospace;
+  font-size: large;
+  width: 98%;
+  height: 20%;
+  margin: 1%;
+  border-style: inset;
+  border-width: 1px;
+  border-color: black;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ClumpAutomata { 
+  width: 800px;
+  margin: 1%;
+  padding: 1%;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+
+  background: #ccc;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+

@@ -1,0 +1,39 @@
+<form name="ClumpForm" method="post" enctype="multipart/form-data" action="/clump-automata" >
+
+  <p>
+    <label for="Pattern">Patterns:</label>
+    <br>
+<textarea name="Pattern" id="Pattern" rows="10" cols="30">
+ACTACTAC
+CTACGACT
+CGATGACT
+</textarea>
+    <br>
+    <label for="PattFile">Or select file with patterns list:</label>
+    <input type="file" name="PattFile" id="PattFile"/>
+  </p>
+
+  <p>
+    <label for="Probabilities">Probabilities:</label>
+    <input type="text" name="Probabilities" id="Probabilities" value="A 0.25 C 0.25 G 0.25 T 0.25"/>
+  </p>
+
+  <p>
+    <label for="PolyTrunc">Polynomial Truncation:</label>
+    <input type="text" name="PolyTrunc" id="PolyTrunc" value="20"/>
+    
+    <label for="A">a:</label>
+    <input type="text" name="A" id="A" value="0.0000305"/>
+  </p>
+
+  <p>
+    <input type="checkbox" name="OutGraphViz" id="OutGraphViz" value="checkbox" /> 
+    <label for="OutGraphViz">GraphViz output</label>
+  </p>
+
+  <p>
+    <input type="submit" name="Action" />
+    <input type="reset" name="Clear" />
+  </p>
+
+</form>

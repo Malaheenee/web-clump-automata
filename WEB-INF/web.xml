@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  
+  <display-name>Servlets for "Clumping Automata"</display-name>
+ 
+<!-- ClumpServlet - main servlet for "clumping"-->
+
+   <servlet>
+      <servlet-name>ClumpServlet</servlet-name>
+      <servlet-class>ClumpServlet</servlet-class>
+      
+      <init-param>
+        <param-name>includedJSP</param-name>
+        <param-value>/WEB-INF/jsp/ClumpMain.jsp</param-value>
+      </init-param>
+      
+      <init-param>
+        <param-name>dotPath</param-name>
+        <param-value>/usr/bin/dot</param-value>
+      </init-param>
+   </servlet>
+ 
+   <servlet-mapping>
+      <servlet-name>ClumpServlet</servlet-name>
+      <url-pattern></url-pattern>
+   </servlet-mapping>
+   
+<!-- end of ClumpServlet-->
+
+</web-app>
