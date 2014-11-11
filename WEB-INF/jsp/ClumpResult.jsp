@@ -36,43 +36,27 @@
 <br>
 <br>
 
-<label>GraphViz code for AutoClump: <a href="javascript:void(0)" onClick="document.forms['autoclump2'].submit()">as dot</a>
+<label>GraphViz code for AutoClump:
+<a href='<%= request.getAttribute("clumpPath") %>?resFile=autoclump.dot&resData=<%= request.getAttribute("aGraph") %>'>as dot</a>
 <% if (request.getAttribute("dotPath") != null) { %>
- or <a href="javascript:void(0)" onClick="document.forms['autoclump'].submit()">as svg</a>
+ or <a href='<%= request.getAttribute("clumpPath") %>?resFile=autoclump.svg&resData=<%= request.getAttribute("aGraph") %>'>as svg</a>
 <br>
 <br>
 <center><%= request.getAttribute("aGraphSVG") %></center>
-<form name="autoclump" method="GET" action='<%= request.getAttribute("clumpPath") %>'>
-<input type="hidden" name="resData" value='<%= request.getAttribute("aGraph") %>' />
-<input type="hidden" name="resFile" value="autoclump.svg" />
-</form>
 <% } %>
 </label>
 
 <br>
 
-<label>GraphViz code for DeepClump: <a href="javascript:void(0)" onClick="document.forms['deepclump2'].submit()">as dot</a>
+<label>GraphViz code for DeepClump:
+<a href='<%= request.getAttribute("clumpPath") %>?resFile=deepclump.dot&resData=<%= request.getAttribute("aGraph2") %>'>as dot</a>
 <% if (request.getAttribute("dotPath") != null) { %>
- or <a href="javascript:void(0)" onClick="document.forms['deepclump'].submit()">as svg</a>
+ or <a href='<%= request.getAttribute("clumpPath") %>?resFile=deepclump.svg&resData=<%= request.getAttribute("aGraph2") %>'>or svg</a>
 <br>
 <br>
 <center><%= request.getAttribute("aGraphSVG2") %></center>
-<form name="deepclump" method="GET" action='<%= request.getAttribute("clumpPath") %>'>
-<input type="hidden" name="resData" value='<%= request.getAttribute("aGraph2") %>' />
-<input type="hidden" name="resFile" value="deepclump.svg" />
-</form>
 <% } %>
 </label>
-
-<form name="autoclump2" method="GET" action='<%= request.getAttribute("clumpPath") %>'>
-<input type="hidden" name="resData" value='<%= request.getAttribute("aGraph") %>' />
-<input type="hidden" name="resFile" value="autoclump.dot" />
-</form>
-
-<form name="deepclump2" method="GET" action='<%= request.getAttribute("clumpPath") %>'>
-<input type="hidden" name="resData" value='<%= request.getAttribute("aGraph2") %>' />
-<input type="hidden" name="resFile" value="deepclump.dot" />
-</form>
 
 <% } %>
 <% } else { %>
@@ -82,3 +66,5 @@
 <br>
 <br>
 <center><input onclick="window.history.back();" type="button" value="Back To Previous Page"/></center>
+
+

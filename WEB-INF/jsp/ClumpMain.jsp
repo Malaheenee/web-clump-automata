@@ -1,6 +1,6 @@
 <%@ page language="java" %>
 
-<!--%@ include file="/html/ClumpHeader.html" %-->
+<%@ include file="/html/ClumpHeader.html" %>
 
 <% if (request.getAttribute("fStatus") != null) { %>
 
@@ -12,4 +12,4 @@
 
 <% } %>
 
-<!--%@ include file="/html/ClumpFooter.html" %-->
+<%@ include file="/html/ClumpFooter.html" %>
